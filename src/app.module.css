@@ -1,0 +1,75 @@
+/* main */
+
+main {
+  display: flex;
+  flex-direction: column;
+  scroll-snap-type: y proximity;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+main section {
+  flex: 0 0 100vh;
+  padding-top: 60px;
+  overflow: hidden;
+  border-bottom: 0.5px solid #33333388;
+  min-height: 540px;
+  scroll-snap-align: start;
+}
+
+/* main::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    min-height: 540px;
+    background: url("/mainbg.png") center/cover;
+    opacity: 0.2;
+
+} */
+ 
+.main-home {
+  display: grid;
+  grid-template: 60px 2fr 1fr 60px / 1fr 1fr 1fr 65px;
+  position: relative;
+}
+.main-home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 540px;
+  background: url("/mainbg.png") center/cover;
+  opacity: 0.2;
+}
+
+.main-about {
+  display: grid;
+  grid-template: 0.1fr 0.8fr 1.1fr / 0.6fr 0.4fr;
+}
+
+.main-skills {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-projects {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-contact {
+  display: grid;
+  grid-template: 7.5rem 6.5rem 1fr / 1fr 1fr;
+}
+
+@media (max-width: 495px) {
+  .main-contact {
+    display: grid;
+    grid-template: 7.5rem 6.5rem 1fr 1fr / 1fr;
+  }
+}
