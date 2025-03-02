@@ -33,13 +33,13 @@ const frameworks = [
     name: "ExpressJS",
   },
   {
-    src: "/",
+    src: "/tailwindlogo.svg",
     name: "Tailwind CSS",
   },
 ];
 const others = [
   {
-    src: "/",
+    src: "/mongodb.svg",
     name: "MongoDB",
   },
   {
@@ -51,7 +51,7 @@ const others = [
     name: "Git",
   },
   {
-    src: "/",
+    src: "/postman.png",
     name: "Postman",
   },
   {

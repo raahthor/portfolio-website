@@ -19,7 +19,7 @@ Built with **React** and **CSS Modules**, ensuring a responsive and engaging use
 
 <br>
 
-**Live :** [Portfolio Website](https://raahthor.github.io/portfolio)
+**Live :** [Portfolio Website](https://raahthor.vercel.app/)
 
 
 For any inquiries, reach out at prashantrathore1435@gmail.com .

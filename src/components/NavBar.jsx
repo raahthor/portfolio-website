@@ -13,7 +13,7 @@ export default function NavBar() {
   useEffect(() => {
     const rootDiv = document.querySelector("#root");
     if (rootDiv) {
-      rootDiv.classList.toggle("light-mode");
+      rootDiv.classList.toggle("light-mode",isThemeChange);
     }
   }, [isThemeChange]);
 
