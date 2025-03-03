@@ -9,6 +9,7 @@ import ContactPage from "./pages/ContactPage";
 import HomePage from "./pages/HomePage";
 import ProjectsPage from "./pages/ProjectsPage";
 import SkillsPage from "./pages/SkillsPage";
+import ParticlesBG from "./components/ParticlesBg";
 
 function App() {
   const [activeSection, setActiveSection] = useState("");
@@ -36,6 +37,7 @@ function App() {
         setActiveSection={setActiveSection}
         activeSection={activeSection}
       />
+      <ParticlesBG />
       <main>
         <section id="home" ref={homeRef} className={clsx(styles["main-home"])}>
           <HomePage />
