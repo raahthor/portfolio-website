@@ -13,11 +13,10 @@ body,
   margin: 0;
 }
 #root {
-  scroll-behavior: smooth;
   background-color: #121212;
   color: #696969;
   display: grid;
-  grid-template: 1fr / 220px 1fr;
+  grid-template: 100vh / 220px 1fr;
   overflow-y: hidden;
   transition: grid-template-columns 0.3s ease;
   z-index: -1;
@@ -85,7 +84,7 @@ body,
     font-size: 50%;
   }
   #root {
-    grid-template: 1fr / 0 1fr;
+    grid-template: 100vh / 0 1fr;
   }
 }
 

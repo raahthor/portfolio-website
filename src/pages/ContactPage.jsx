@@ -96,7 +96,7 @@ export default function ContactPage() {
 
         <a
           className={clsx("hover-effect")}
-          href="https://www.linkedin.com/in/prashant-rathore-401590296"
+          href="https://linkedin.com/in/raahthor/"
           target="_blank"
           rel="noopener noreferrer"
         >
