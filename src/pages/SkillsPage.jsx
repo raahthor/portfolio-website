@@ -1,5 +1,6 @@
 import clsx from "clsx";
 import styles from "./skillspage.module.css";
+import {motion} from "framer-motion"
 
 const languages = [
   {
@@ -63,11 +64,19 @@ const others = [
 export default function SkillsPage() {
   return (
     <>
-      <div className={clsx(styles["skills-title"], "lm-skills-title")}>
+      <motion.div className={clsx(styles["skills-title"], "lm-skills-title")}
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1, delay: 0.4 }}
+      viewport={{ once: true }}>
         Skills
-      </div>
+      </motion.div>
 
-      <div className={clsx(styles["languages"], styles["skills-container"])}>
+      <motion.div className={clsx(styles["languages"], styles["skills-container"])}
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1.1, delay: 0.5 }}
+      viewport={{ once: true }}>
         <h3 className={clsx(styles["skill-con-title"], "lm-skill-con-title")}>
           Languages
         </h3>
@@ -83,9 +92,13 @@ export default function SkillsPage() {
           ))}
           <div className={clsx(styles["skill-logos"], "lm-skill-logos")}></div>
         </div>
-      </div>
+      </motion.div>
 
-      <div className={clsx(styles["frameworks"], styles["skills-container"])}>
+      <motion.div className={clsx(styles["frameworks"], styles["skills-container"])}
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1.2, delay: 0.6 }}
+      viewport={{ once: true }}>
         <h3 className={clsx(styles["skill-con-title"], "lm-skill-con-title")}>
           Frameworks & Libraries
         </h3>
@@ -100,9 +113,13 @@ export default function SkillsPage() {
             </div>
           ))}
         </div>
-      </div>
+      </motion.div>
 
-      <div className={clsx(styles["others"], styles["skills-container"])}>
+      <motion.div className={clsx(styles["others"], styles["skills-container"])}
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1.3, delay: 0.7 }}
+      viewport={{ once: true }}>
         <h3 className={clsx(styles["skill-con-title"], "lm-skill-con-title")}>
           Others
         </h3>
@@ -118,7 +135,7 @@ export default function SkillsPage() {
           ))}
           <div className={clsx(styles["skill-logos"], "lm-skill-logos")}></div>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 }

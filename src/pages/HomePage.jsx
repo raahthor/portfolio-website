@@ -1,25 +1,60 @@
 import clsx from "clsx";
+import { motion } from "framer-motion";
 import styles from "./homepage.module.css";
 
 export default function HomePage() {
   return (
     <>
-      <div className={clsx(styles["code-snippet2"])}>&lt;main&gt;</div>
+      <motion.div
+        className={clsx(styles["code-snippet2"])}
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 0.2}}
+        viewport={{ once: true }}
+      >
+        &lt;main&gt;
+      </motion.div>
 
-      <div className={clsx(styles["main-text"], "lm-main-text")}>
+      <motion.div
+        className={clsx(styles["main-text"], "lm-main-text")}
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1.1, delay: 0.3 }}
+        viewport={{ once: true }}
+      >
         <h2 className={clsx(styles["web"])}>Full-Stack</h2>
         <h2 className={clsx(styles["dev"])}>Developer</h2>
-      </div>
+      </motion.div>
 
-      <p className={clsx(styles["paragraph"])}>
+      <motion.p
+        className={clsx(styles["paragraph"])}
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1.2, delay: 0.4 }}
+        viewport={{ once: true }}
+      >
         👋 Hi, I'm Prashant Rathore – a full-stack web developer with a knack
         for creating seamless, responsive, and engaging digital experiences.
         Explore my skills and projects below!
-      </p>
+      </motion.p>
 
-      <div className={clsx(styles["code-snippet2"])}>&lt;/main&gt;</div>
+      <motion.div
+        className={clsx(styles["code-snippet2"])}
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1.3, delay: 0.5 }}
+        viewport={{ once: true }}
+      >
+        &lt;/main&gt;
+      </motion.div>
 
-      <div className={clsx(styles["handles"])}>
+      <motion.div
+        className={clsx(styles["handles"])}
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1.4, delay: 0.6 }}
+        viewport={{ once: true }}
+      >
         <a
           href="https://github.com/raahthor"
           target="_blank"
@@ -42,7 +77,7 @@ export default function HomePage() {
           <img src="/mailme.png" alt="gmail" />
         </a>
         <div className={clsx(styles["vertical-line"])}></div>
-      </div>
+      </motion.div>
     </>
   );
 }

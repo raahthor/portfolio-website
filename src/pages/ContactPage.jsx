@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import styles from "./contactpage.module.css";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -43,14 +44,33 @@ export default function ContactPage() {
   }
   return (
     <>
-      <div className={clsx(styles["contact-title"], "lm-contact-title")}>
+      <motion.div
+        className={clsx(styles["contact-title"], "lm-contact-title")}
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 0.4 }}
+        viewport={{ once: true }}
+      >
         Get in Touch
-      </div>
-      <p className={clsx(styles["contact-p"])}>
+      </motion.div>
+      <motion.p
+        className={clsx(styles["contact-p"])}
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1.1, delay: 0.5 }}
+        viewport={{ once: true }}
+      >
         Have a question or want to work together? I'd love to connect!
-      </p>
+      </motion.p>
 
-      <form onSubmit={handleSubmit} className={clsx(styles["contactform"])}>
+      <motion.form
+        onSubmit={handleSubmit}
+        className={clsx(styles["contactform"])}
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1.2, delay: 0.6 }}
+        viewport={{ once: true }}
+      >
         <input
           onChange={handleChange}
           value={formData.name}
@@ -82,8 +102,14 @@ export default function ContactPage() {
         >
           Send
         </button>
-      </form>
-      <div className={clsx(styles["mycontactinfo"], "lm-mycontactinfo")}>
+      </motion.form>
+      <motion.div
+        className={clsx(styles["mycontactinfo"], "lm-mycontactinfo")}
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1.3, delay: 0.7 }}
+        viewport={{ once: true }}
+      >
         <div className={clsx(styles["contact-border"])}></div>
 
         <a
@@ -113,7 +139,7 @@ export default function ContactPage() {
           <img src="/github.png" alt="GitHub" />
           My GitHub
         </a>
-      </div>
+      </motion.div>
     </>
   );
 }
