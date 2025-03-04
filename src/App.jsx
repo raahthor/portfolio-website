@@ -10,6 +10,7 @@ import HomePage from "./pages/HomePage";
 import ProjectsPage from "./pages/ProjectsPage";
 import SkillsPage from "./pages/SkillsPage";
 import ParticlesBG from "./components/ParticlesBg";
+import { Analytics } from "@vercel/analytics/react";
 
 function App() {
   const [activeSection, setActiveSection] = useState("");
@@ -71,6 +72,7 @@ function App() {
           <ContactPage />
         </section>
       </main>
+      <Analytics />
     </>
   );
 }
