@@ -3,7 +3,7 @@
  A **personal portfolio website** showcasing my **skills, projects, and experience** in **full-stack web development**.  
 Built with **React** and **CSS Modules**, ensuring a responsive and engaging user experience.
 
-![Home Page UI](./public/Ui/ui_image.png)
+![Home Page UI](./public/UI/ui_image.png)
 
 ## ⚡Features
 
