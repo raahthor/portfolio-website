@@ -149,10 +149,10 @@ export default function ContactPage() {
         </a>
         <a
           className={clsx("hover-effect")}
-          href="../public/resume/MyResume.pdf"
+          href="/resume/MyResume.pdf"
           target="_blank"
         >
-          <img src="/file.png" alt="Email" />
+          <img src="/file.png" alt="Resume" />
           Resume
         </a>
       </motion.div>
