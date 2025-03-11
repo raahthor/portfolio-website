@@ -145,7 +145,7 @@ export default function ContactPage() {
           href="mailto:prashantrathore1435@gmail.com?subject=Hello!&body=I%20would%20like%20to%20discuss..."
         >
           <img src="/mailme.png" alt="Email" />
-          Mail Me
+          Email Me
         </a>
         <a
           className={clsx("hover-effect")}
