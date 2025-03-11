@@ -30,7 +30,7 @@ export default function HomePage() {
         className={clsx(styles["paragraph"])}
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1.2, delay: 0.4 }}
+        transition={{ duration: 1.1, delay: 0.4 }}
         viewport={{ once: true }}
       >
         👋 Hi, I'm Prashant Rathore – a full-stack web developer with a knack
@@ -42,7 +42,7 @@ export default function HomePage() {
         className={clsx(styles["code-snippet2"])}
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1.3, delay: 0.5 }}
+        transition={{ duration: 1.1, delay: 0.5 }}
         viewport={{ once: true }}
       >
         &lt;/main&gt;
@@ -52,7 +52,7 @@ export default function HomePage() {
         className={clsx(styles["handles"])}
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1.4, delay: 0.6 }}
+        transition={{ duration: 1.2, delay: 0.6 }}
         viewport={{ once: true }}
       >
         <a

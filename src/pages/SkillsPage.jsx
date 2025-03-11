@@ -4,21 +4,17 @@ import {motion} from "framer-motion"
 
 const languages = [
   {
-    src: "/cpplogo.png",
-    name: "C++",
-  },
-  {
     src: "/jslogo.png",
     name: "JavaScript",
   },
   {
-    src: "/htmllogo.png",
-    name: "HTML",
+    src: "/typescript.svg",
+    name: "TypeScript",
   },
   {
-    src: "/csslogo.png",
-    name: "CSS",
-  },
+    src: "/cpplogo.png",
+    name: "C++",
+  }
 ];
 const frameworks = [
   {
@@ -26,12 +22,16 @@ const frameworks = [
     name: "NodeJs",
   },
   {
+    src: "/express.png",
+    name: "ExpressJS",
+  },
+  {
     src: "/reactjs.png",
     name: "ReactJS",
   },
   {
-    src: "/express.png",
-    name: "ExpressJS",
+    src:"/nextjs.svg",
+    name:"NextJS"
   },
   {
     src: "/tailwindlogo.svg",
@@ -67,15 +67,15 @@ export default function SkillsPage() {
       <motion.div className={clsx(styles["skills-title"], "lm-skills-title")}
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1, delay: 0.4 }}
+      transition={{ duration: 1, delay: 0.3 }}
       viewport={{ once: true }}>
         Skills
       </motion.div>
 
       <motion.div className={clsx(styles["languages"], styles["skills-container"])}
-      initial={{ opacity: 0, y: 30 }}
+      initial={{ opacity: 0, y: 35 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1.1, delay: 0.5 }}
+      transition={{ duration: 1.1, delay: 0.4 }}
       viewport={{ once: true }}>
         <h3 className={clsx(styles["skill-con-title"], "lm-skill-con-title")}>
           Languages
@@ -95,9 +95,9 @@ export default function SkillsPage() {
       </motion.div>
 
       <motion.div className={clsx(styles["frameworks"], styles["skills-container"])}
-      initial={{ opacity: 0, y: 30 }}
+      initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1.2, delay: 0.6 }}
+      transition={{ duration: 1.2, delay: 0.5 }}
       viewport={{ once: true }}>
         <h3 className={clsx(styles["skill-con-title"], "lm-skill-con-title")}>
           Frameworks & Libraries
@@ -116,9 +116,9 @@ export default function SkillsPage() {
       </motion.div>
 
       <motion.div className={clsx(styles["others"], styles["skills-container"])}
-      initial={{ opacity: 0, y: 30 }}
+      initial={{ opacity: 0, y: 45 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1.3, delay: 0.7 }}
+      transition={{ duration: 1.3, delay: 0.6 }}
       viewport={{ once: true }}>
         <h3 className={clsx(styles["skill-con-title"], "lm-skill-con-title")}>
           Others

@@ -30,7 +30,7 @@
   text-align: center;
 }
 .skill-content img {
-  height: clamp(4.3rem, 8vh, 8rem);
+  height: clamp(5rem, 12vw, 6.5rem);
   margin-top: 6px;
   margin-bottom: 5px;
   filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.15));

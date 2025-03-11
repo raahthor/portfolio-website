@@ -9,7 +9,7 @@ export default function AboutPage() {
         className={clsx(styles["aboutMe"], "lm-aboutMe")}
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, delay: 0.4 }}
+        transition={{ duration: 1, delay: 0.3 }}
         viewport={{ once: true }}
       >
         About Me
@@ -18,7 +18,7 @@ export default function AboutPage() {
         className={clsx(styles["myPicture"])}
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1.1, delay: 0.5 }}
+        transition={{ duration: 1.1, delay: 0.4 }}
         viewport={{ once: true }}
       >
         <img src="/download.jpg" />
@@ -27,7 +27,7 @@ export default function AboutPage() {
         className={clsx(styles["aboutMeContent"])}
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1.2, delay: 0.6 }}
+        transition={{ duration: 1.1, delay: 0.5 }}
         viewport={{ once: true }}
       >
         Hey there! I'm Prashant Rathore, a passionate full stack web developer
