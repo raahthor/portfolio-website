@@ -147,14 +147,6 @@ export default function ContactPage() {
           <img src="/mailme.png" alt="Email" />
           Email Me
         </a>
-        <a
-          className={clsx("hover-effect")}
-          href="/resume/MyResume.pdf"
-          target="_blank"
-        >
-          <img src="/file.png" alt="Resume" />
-          Resume
-        </a>
       </motion.div>
     </>
   );
