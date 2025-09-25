@@ -23,6 +23,23 @@ export default function ProjectsPage() {
           transition={{ duration: 1.1, delay: 0.4 }}
           viewport={{ once: true }}
         >
+          <img src="/bug-tracker.png" alt="Bug Tracker UI Image" />
+          <a
+            href="https://github.com/raahthor/bugTracker"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            A Bug Tracker SaaS to create/join organizations, manage projects and
+            bugs.
+          </a>
+        </motion.div>
+        <motion.div
+          className={clsx(styles["project-content"], "lm-project-content")}
+          initial={{ opacity: 0, y: 35 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.1, delay: 0.4 }}
+          viewport={{ once: true }}
+        >
           <img src="/urlShortener.png" alt="URL Shortner Image" />
           <a
             href="https://github.com/raahthor/url-shortener"
