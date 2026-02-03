@@ -11,7 +11,7 @@ export default function NavBar() {
   }
 
   useEffect(() => {
-    const rootDiv = document.querySelector("#root");
+    const rootDiv = document.querySelector("body");
     if (rootDiv) {
       rootDiv.classList.toggle("light-mode", isThemeChange);
     }
