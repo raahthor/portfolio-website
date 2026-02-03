@@ -30,7 +30,7 @@ export default function NavBar() {
             "hover-effect",
             isThemeChange && styles["moon-toggle"],
           )}
-          type="button"
+          // type="button"
           onClick={changeTheme}
         ></button>
       </nav>
