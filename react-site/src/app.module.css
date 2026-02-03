@@ -1,6 +1,6 @@
 /* main */
 
-.main {
+main {
   display: flex;
   flex-direction: column;
   scroll-snap-type: y proximity;
@@ -9,7 +9,7 @@
   z-index: 1;
 }
 
-.section {
+main section {
   flex: 0 0 100vh;
   padding-top: 60px;
   overflow: hidden;

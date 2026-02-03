@@ -1,27 +1,19 @@
-"use client";
-
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import clsx from "clsx";
-
-import styles from "./page.module.css";
-
-import NavBar from "@/components/NavBar";
-import SideBar from "@/components/SideBar";
-import HomeSection from "@/components/HomeSection";
-import AboutSection from "@/components/AboutSection";
-import SkillsSection from "@/components/SkillsSection";
-import ProjectsSection from "@/components/ProjectsSection";
-import ContactSection from "@/components/ContactSection";
-import ParticlesBG from "@/components/ParticlesBg";
-
+import styles from "./app.module.css";
+import NavBar from "./components/NavBar";
+import SideBar from "./components/SideBar";
+import AboutPage from "./pages/AboutPage";
+import ContactPage from "./pages/ContactPage";
+import HomePage from "./pages/HomePage";
+import ProjectsPage from "./pages/ProjectsPage";
+import SkillsPage from "./pages/SkillsPage";
+import ParticlesBG from "./components/ParticlesBg";
 import { Analytics } from "@vercel/analytics/react";
 
-type SectionName = "home" | "about" | "skills" | "projects" | "contact" | "";
-
-export default function Page() {
-  const [activeSection, setActiveSection] = useState<SectionName>("");
-
+function App() {
+  const [activeSection, setActiveSection] = useState("");
   const sectionOptions = { threshold: 0.5 };
 
   const { ref: homeRef, inView: homeInView } = useInView(sectionOptions);
@@ -42,57 +34,47 @@ export default function Page() {
   return (
     <>
       <NavBar />
-
       <SideBar
-        activeSection={activeSection}
         setActiveSection={setActiveSection}
+        activeSection={activeSection}
       />
-
       <ParticlesBG />
-
-      <main className={clsx(styles["main"])}>
-        <section
-          id="home"
-          ref={homeRef}
-          className={clsx(styles["main-home"], styles.section)}
-        >
-          <HomeSection />
+      <main>
+        <section id="home" ref={homeRef} className={clsx(styles["main-home"])}>
+          <HomePage />
         </section>
-
         <section
           id="about"
           ref={aboutRef}
-          className={clsx(styles["main-about"], styles.section)}
+          className={clsx(styles["main-about"])}
         >
-          <AboutSection />
+          <AboutPage />
         </section>
-
         <section
           id="skills"
           ref={skillsRef}
-          className={clsx(styles["main-skills"], styles.section)}
+          className={clsx(styles["main-skills"])}
         >
-          <SkillsSection />
+          <SkillsPage />
         </section>
-
         <section
           id="projects"
           ref={projectsRef}
-          className={clsx(styles["main-projects"], styles.section)}
+          className={clsx(styles["main-projects"])}
         >
-          <ProjectsSection />
+          <ProjectsPage />
         </section>
-
         <section
           id="contact"
           ref={contactRef}
-          className={clsx(styles["main-contact"], styles.section)}
+          className={clsx(styles["main-contact"])}
         >
-          <ContactSection />
+          <ContactPage />
         </section>
       </main>
-
       <Analytics />
     </>
   );
 }
+
+export default App;

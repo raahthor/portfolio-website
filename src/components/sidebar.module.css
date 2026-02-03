@@ -1,0 +1,130 @@
+/* Side Bar */
+
+.menu-icon {
+  position: fixed;
+  left: 15px;
+  top: 13px;
+  height: 35px;
+  width: 35px;
+  border: 1px solid #8c52ff;
+  border-radius: 17%;
+  background: transparent url("/menu.svg") no-repeat center;
+  background-size: 22px;
+  box-shadow: 0 3px 6px 0.5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  display: none;
+  z-index: 7;
+}
+
+.side-bar {
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  color: #b0b0b0;
+  background-color: #0d0d0d;
+  border-right: 1px solid #333333;
+  display: flex;
+  flex-direction: column;
+  z-index: 6;
+  transition: width 0.2s ease;
+}
+.side-bar::-webkit-scrollbar {
+  display: none;
+}
+.profile {
+  margin: 30px 0 10px 0;
+  height: 280px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.code-snippet1 {
+  margin-left: 10px;
+  font-size: 16px;
+  font-style: italic;
+  opacity: 0.5;
+}
+.profile-text {
+  padding: 0.8rem;
+  text-align: center;
+  font-size: 17.5px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  background: linear-gradient(135deg, #dfdfdf 35%, #9d6cff 50%, #dfdfdf 60%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-size: 230%;
+  background-clip: text;
+  animation: grad-animation 6s infinite;
+}
+@keyframes grad-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.side-bar ul {
+  padding: 0;
+  list-style-type: none;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+.side-bar li {
+  color: white;
+  border-top: 0.3px solid #333333;
+  border-bottom: 0.3px solid #333333;
+}
+.side-bar ul li a {
+  padding: 1.75rem 2.2rem;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+.side-bar ul li a.clicked {
+  color: #8c52ff;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 220px;
+  right: 10px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  z-index: 5;
+  display: none;
+  transition: opacity 0.2 ease;
+}
+@media (max-width: 750px) {
+  .side-bar {
+    width: 0;
+  }
+  .side-bar.open {
+    width: 220px;
+  }
+  .overlay.show {
+    display: block;
+    opacity: 1; /* Make it visible */
+  }
+  .menu-icon {
+    display: block;
+  }
+}
+@media (max-width: 495px) {
+  .profile {
+    height: 220px;
+  }
+}
+@media (hover: none) and (pointer: coarse) {
+  .overlay {
+    right: 0;
+  }
+}
