@@ -50,9 +50,8 @@ export default function HomePage() {
         transition={{ duration: 1.1, delay: 0.4 }}
         viewport={{ once: true }}
       >
-        Hi, I'm Prashant Rathore – a full-stack web developer with a knack for
-        creating seamless, responsive, and engaging digital experiences. Explore
-        my skills and projects below!
+        Where Node.js meets late-night debugging and optimized solutions.
+        Backend-focused developer building web applications, and SaaS platforms.
       </motion.p>
 
       <motion.div

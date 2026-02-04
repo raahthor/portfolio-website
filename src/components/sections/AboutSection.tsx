@@ -47,14 +47,15 @@ export default function AboutPage() {
         transition={{ duration: 1.1, delay: 0.5 }}
         viewport={{ once: true }}
       >
-        Hey there! I'm Prashant Rathore, a passionate full stack web developer
-        with a knack for problem-solving and an appreciation for good design.
-        While I'm still in the early stages of my journey, I'm actively building
-        my skills to strengthen both frontend and backend expertise. In the
-        future, I plan to expand my knowledge in AI/ML to integrate smart
-        solutions into my Projects. When I'm not coding, you'll likely find me
-        listening to music, gaming, or at the gym. I'm excited to connect with
-        other tech enthusiasts — let's grow together!
+        Hey! I'm Prashant - a backend-focused developer who lives in that sweet
+        spot between coffee-fueled problem-solving and production-ready code. I
+        build multi-tenant SaaS platforms and web applications using Node.js,
+        Next.js, and whatever tool gets the job done right. From designing
+        secure systems with OAuth and JWT to implementing role-based access
+        control, I focus on writing code that's scalable, maintainable, and
+        actually works in production. When I'm not deep in terminal windows or
+        wrestling with Docker containers, you'll find me gaming, lifting
+        weights, or falling down rabbit holes of new tech.
       </motion.div>
     </section>
   );

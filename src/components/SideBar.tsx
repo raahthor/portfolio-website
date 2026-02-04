@@ -21,7 +21,7 @@ export default function SideBar() {
   function handleNavigation(section: SectionName) {
     setMenuOpen(false);
     setActive(section);
-    // document.getElementById(section)?.scrollIntoView({ behavior: "smooth" });
+    document.getElementById(section)?.scrollIntoView({ behavior: "smooth" });
   }
 
   return (
