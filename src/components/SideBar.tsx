@@ -3,16 +3,14 @@
 import { useState } from "react";
 import clsx from "clsx";
 import styles from "./sidebar.module.css";
-import { useActiveSection } from "@/store/activeSection";
-
-type Section = "home" | "about" | "skills" | "projects" | "contact";
+import { SectionName, useActiveSection } from "@/store/activeSection";
 
 export default function SideBar() {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
-  const active = useActiveSection((s) => s.active);
-  const setActive = useActiveSection((s) => s.setActive);
+  const active = useActiveSection((state) => state.active);
+  const setActive = useActiveSection((state) => state.setActive);
 
-  const sections: Section[] = [
+  const sections: SectionName[] = [
     "home",
     "about",
     "skills",
@@ -20,10 +18,10 @@ export default function SideBar() {
     "contact",
   ];
 
-  function handleNavigation(section: Section) {
+  function handleNavigation(section: SectionName) {
     setMenuOpen(false);
     setActive(section);
-    document.getElementById(section)?.scrollIntoView({ behavior: "smooth" });
+    // document.getElementById(section)?.scrollIntoView({ behavior: "smooth" });
   }
 
   return (

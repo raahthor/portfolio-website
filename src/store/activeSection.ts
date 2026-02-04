@@ -8,5 +8,8 @@ type ActiveSectionStore = {
 };
 export const useActiveSection = create<ActiveSectionStore>((set) => ({
   active: "home",
-  setActive: (active) => set({ active }),
+  setActive: (section) =>
+    set((state) => ({
+      active: section,
+    })),
 }));
