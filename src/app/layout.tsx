@@ -18,7 +18,6 @@ const firaMono = Fira_Mono({
 export const metadata: Metadata = {
   title: "Prashant Rathore",
   description: "Full-stack web developer's portfolio website",
-  icons: { icon: "/favicon.png" },
   openGraph: {
     title: "Prashant Rathore | Full Stack Developer",
     url: "https://raahthor.vercel.app",

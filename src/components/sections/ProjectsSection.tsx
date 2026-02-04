@@ -46,8 +46,9 @@ export default function ProjectsPage() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            A Bug Tracker SaaS to create/join organizations, manage projects and
-            bugs.
+            BugTracker is a lightweight application for issue and project
+            tracking. Designed as a simplified Jira, it enables users to create,
+            prioritize, and manage tasks or bugs within collaborative projects.
           </a>
         </motion.div>
         <motion.div
@@ -57,48 +58,15 @@ export default function ProjectsPage() {
           transition={{ duration: 1.1, delay: 0.4 }}
           viewport={{ once: true }}
         >
-          <img src="/urlShortener.png" alt="URL Shortner Image" />
           <a
             href="https://github.com/raahthor/url-shortener"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Full-stack URL shortener with tracking, built on the PERN stack.
+            A full-stack URL shortener built with the PERN stack, enabling users
+            to shorten URLs, track clicks.
           </a>
-        </motion.div>
-        <motion.div
-          className={clsx(styles["project-content"], "lm-project-content")}
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.2, delay: 0.5 }}
-          viewport={{ once: true }}
-        >
-          <img src="/tictactoe.png" alt="tic tac toe logo" />
-          <a
-            href="https://github.com/raahthor/Tic-Tac-Toe"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            A basic command-line Tic-Tac-Toe Game built in C++.
-          </a>
-        </motion.div>
-        <motion.div
-          className={clsx(styles["project-content"], "lm-project-content")}
-          initial={{ opacity: 0, y: 45 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.3, delay: 0.6 }}
-          viewport={{ once: true }}
-        >
-          <p>To be added</p>
-        </motion.div>
-        <motion.div
-          className={clsx(styles["project-content"], "lm-project-content")}
-          initial={{ opacity: 0, y: 45 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.3, delay: 0.7 }}
-          viewport={{ once: true }}
-        >
-          <p>To be added</p>
+          <img src="/urlShortener.png" alt="URL Shortner Image" />
         </motion.div>
       </div>
     </section>

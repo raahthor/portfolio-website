@@ -40,7 +40,7 @@ export default function NavBar() {
         className={clsx(styles["pfp"], isPfpOpen && styles["pfp-opened"])}
       >
         <p>Click or tap anywhere to close!</p>
-        <img src="/profileicon.jpg" alt="profile image opened" />
+        <img src="/profiles/profileicon.jpg" alt="profile image opened" />
       </div>
     </>
   );
