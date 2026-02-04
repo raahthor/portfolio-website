@@ -1,5 +1,10 @@
 /* skill section */
 
+.main-skills {
+  display: flex;
+  flex-direction: column;
+}
+
 .skills-title {
   height: 7.5rem;
   text-align: center;

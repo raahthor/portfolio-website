@@ -1,9 +1,22 @@
+"use client";
+import { useInView } from "react-intersection-observer";
+import { useActiveSection } from "@/store/activeSection";
 import clsx from "clsx";
 import styles from "./contact.module.css";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 
 export default function ContactPage() {
+  const setActive = useActiveSection((s) => s.setActive);
+  const { ref } = useInView({
+    threshold: 0.5,
+    onChange: (inView) => {
+      if (inView) {
+        setActive("contact");
+      }
+    },
+  });
+
   const [formData, setFormData] = useState<{
     name: string;
     email: string;
@@ -51,7 +64,11 @@ export default function ContactPage() {
     }
   }
   return (
-    <>
+    <section
+      id="contact"
+      ref={ref}
+      className={clsx(styles["main-contact"], "section")}
+    >
       <motion.div
         className={clsx(styles["contact-title"], "lm-contact-title")}
         initial={{ opacity: 0, y: 30 }}
@@ -156,6 +173,6 @@ export default function ContactPage() {
           Email Me
         </a>
       </motion.div>
-    </>
+    </section>
   );
 }

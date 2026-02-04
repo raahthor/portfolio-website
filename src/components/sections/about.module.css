@@ -1,5 +1,9 @@
 /* about section */
 
+.main-about {
+  display: grid;
+  grid-template: 0.1fr 0.8fr 1.1fr / 0.6fr 0.4fr;
+}
 
 .aboutMe {
   grid-column: 1 / 3;

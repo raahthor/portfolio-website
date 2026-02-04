@@ -1,10 +1,27 @@
+"use client";
+import { useInView } from "react-intersection-observer";
+import { useActiveSection } from "@/store/activeSection";
 import clsx from "clsx";
 import styles from "./projects.module.css";
 import { motion } from "framer-motion";
 
 export default function ProjectsPage() {
+  const setActive = useActiveSection((s) => s.setActive);
+  const { ref } = useInView({
+    threshold: 0.5,
+    onChange: (inView) => {
+      if (inView) {
+        setActive("projects");
+      }
+    },
+  });
+
   return (
-    <>
+    <section
+      id="projects"
+      ref={ref}
+      className={clsx(styles["main-projects"], "section")}
+    >
       <motion.div
         className={clsx(styles["projects-title"], "lm-projects-title")}
         initial={{ opacity: 0, y: 30 }}
@@ -84,6 +101,6 @@ export default function ProjectsPage() {
           <p>To be added</p>
         </motion.div>
       </div>
-    </>
+    </section>
   );
 }

@@ -1,10 +1,27 @@
+"use client";
+import { useInView } from "react-intersection-observer";
+import { useActiveSection } from "@/store/activeSection";
 import clsx from "clsx";
 import styles from "./about.module.css";
 import { motion } from "framer-motion";
 
 export default function AboutPage() {
+  const setActive = useActiveSection((s) => s.setActive);
+  const { ref } = useInView({
+    threshold: 0.5,
+    onChange: (inView) => {
+      if (inView) {
+        setActive("about");
+      }
+    },
+  });
+
   return (
-    <>
+    <section
+      id="about"
+      ref={ref}
+      className={clsx(styles["main-about"], "section")}
+    >
       <motion.div
         className={clsx(styles["aboutMe"], "lm-aboutMe")}
         initial={{ opacity: 0, y: 30 }}
@@ -39,6 +56,6 @@ export default function AboutPage() {
         listening to music, gaming, or at the gym. I'm excited to connect with
         other tech enthusiasts — let's grow together!
       </motion.div>
-    </>
+    </section>
   );
 }

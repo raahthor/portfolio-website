@@ -1,15 +1,32 @@
+"use client";
+import { useInView } from "react-intersection-observer";
+import { useActiveSection } from "@/store/activeSection";
 import clsx from "clsx";
 import { motion } from "framer-motion";
 import styles from "./home.module.css";
 
 export default function HomePage() {
+  const setActive = useActiveSection((s) => s.setActive);
+  const { ref } = useInView({
+    threshold: 0.5,
+    onChange: (inView) => {
+      if (inView) {
+        setActive("home");
+      }
+    },
+  });
+
   return (
-    <>
+    <section
+      id="home"
+      ref={ref}
+      className={clsx(styles["main-home"], "section")}
+    >
       <motion.div
         className={clsx(styles["code-snippet2"])}
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, delay: 0.2}}
+        transition={{ duration: 1, delay: 0.2 }}
         viewport={{ once: true }}
       >
         &lt;main&gt;
@@ -33,9 +50,9 @@ export default function HomePage() {
         transition={{ duration: 1.1, delay: 0.4 }}
         viewport={{ once: true }}
       >
-        Hi, I'm Prashant Rathore – a full-stack web developer with a knack
-        for creating seamless, responsive, and engaging digital experiences.
-        Explore my skills and projects below!
+        Hi, I'm Prashant Rathore – a full-stack web developer with a knack for
+        creating seamless, responsive, and engaging digital experiences. Explore
+        my skills and projects below!
       </motion.p>
 
       <motion.div
@@ -78,6 +95,6 @@ export default function HomePage() {
         </a>
         <div className={clsx(styles["vertical-line"])}></div>
       </motion.div>
-    </>
+    </section>
   );
 }
