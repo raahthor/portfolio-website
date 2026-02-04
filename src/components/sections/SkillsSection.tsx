@@ -7,13 +7,14 @@ import { motion } from "framer-motion";
 
 const languages = [
   {
-    src: "/jslogo.png",
-    name: "JavaScript",
-  },
-  {
     src: "/typescript.svg",
     name: "TypeScript",
   },
+  {
+    src: "/jslogo.png",
+    name: "JavaScript",
+  },
+
   {
     src: "/cpplogo.png",
     name: "C++",
@@ -25,16 +26,16 @@ const frameworks = [
     name: "NodeJs",
   },
   {
+    src: "/nextjs.svg",
+    name: "NextJS",
+  },
+  {
     src: "/express.png",
     name: "ExpressJS",
   },
   {
     src: "/reactjs.png",
     name: "ReactJS",
-  },
-  {
-    src: "/nextjs.svg",
-    name: "NextJS",
   },
   {
     src: "/tailwindlogo.svg",
@@ -111,7 +112,6 @@ export default function SkillsPage() {
               <h4>{item.name}</h4>
             </div>
           ))}
-          <div className={clsx(styles["skill-logos"], "lm-skill-logos")}></div>
         </div>
       </motion.div>
 
@@ -158,7 +158,6 @@ export default function SkillsPage() {
               <h4>{item.name}</h4>
             </div>
           ))}
-          <div className={clsx(styles["skill-logos"], "lm-skill-logos")}></div>
         </div>
       </motion.div>
     </section>

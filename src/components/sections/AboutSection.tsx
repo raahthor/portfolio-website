@@ -38,7 +38,7 @@ export default function AboutPage() {
         transition={{ duration: 1.1, delay: 0.4 }}
         viewport={{ once: true }}
       >
-        <img src="/download.jpg" />
+        <img src="/profiles/profile1.webp" />
       </motion.div>
       <motion.div
         className={clsx(styles["aboutMeContent"])}
