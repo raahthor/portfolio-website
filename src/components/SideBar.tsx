@@ -3,19 +3,14 @@
 import { useState } from "react";
 import clsx from "clsx";
 import styles from "./sidebar.module.css";
+import { useActiveSection } from "@/store/activeSection";
 
 type Section = "home" | "about" | "skills" | "projects" | "contact";
 
-type SideBarProps = {
-  activeSection: Section | "";
-  setActiveSection: React.Dispatch<React.SetStateAction<Section | "">>;
-};
-
-export default function SideBar({
-  activeSection,
-  setActiveSection,
-}: SideBarProps) {
+export default function SideBar() {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
+  const active = useActiveSection((s) => s.active);
+  const setActive = useActiveSection((s) => s.setActive);
 
   const sections: Section[] = [
     "home",
@@ -27,7 +22,8 @@ export default function SideBar({
 
   function handleNavigation(section: Section) {
     setMenuOpen(false);
-    setActiveSection(section);
+    setActive(section);
+    document.getElementById(section)?.scrollIntoView({ behavior: "smooth" });
   }
 
   return (
@@ -60,7 +56,7 @@ export default function SideBar({
                 onClick={() => handleNavigation(section)}
                 className={clsx(
                   "hover-effect",
-                  activeSection === section && styles["clicked"],
+                  active === section && styles["clicked"],
                 )}
               >
                 .{section}()

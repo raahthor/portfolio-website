@@ -1,5 +1,10 @@
 /* projects section */
 
+.main-projects {
+  display: flex;
+  flex-direction: column;
+}
+
 .projects-title {
   height: 7.5rem;
   text-align: center;
